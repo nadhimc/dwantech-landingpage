@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import {
   HiPencil,
@@ -21,39 +20,39 @@ const HomePage: React.FC = () => {
   const features = [
     {
       icon: HiPencil,
-      title: "Custom Design",
+      title: "Prototype Cepat & Murah",
       description:
-        "Tailored to your brand&apos;s unique identity, our designs are crafted to engage your audience and drive conversions.",
+        "Dapatkan website prototype dalam 3 hari dengan investasi minimal. Coba konsep bisnis Anda tanpa risiko besar.",
     },
     {
       icon: HiDeviceMobile,
-      title: "Fully Responsive",
+      title: "Test di Semua Perangkat",
       description:
-        "Your landing page will look and function flawlessly on all devices, from desktops to smartphones.",
+        "Lihat bagaimana bisnis Anda berjalan di desktop, tablet, dan smartphone. Validasi konsep sebelum investasi lebih besar.",
     },
     {
       icon: HiLightningBolt,
-      title: "Optimized for Speed",
+      title: "Hasil Cepat Terlihat",
       description:
-        "We build fast-loading pages that reduce bounce rates and keep your visitors engaged from the first second.",
+        "Dalam 1-2 minggu, Anda sudah bisa melihat apakah konsep bisnis Anda berhasil menarik pelanggan atau tidak.",
     },
     {
       icon: HiSearch,
-      title: "SEO-Ready",
+      title: "SEO Dasar Gratis",
       description:
-        "Built with SEO best practices to help you rank higher in search results and attract more organic traffic.",
+        "Website prototype sudah include SEO dasar agar mudah ditemukan di Google. Upgrade ke advanced SEO jika hasilnya bagus.",
     },
     {
       icon: HiChartBar,
-      title: "Analytics Integration",
+      title: "Data Real untuk Keputusan",
       description:
-        "Track your success with integrated analytics. Understand your visitors and optimize for better performance.",
+        "Lihat data nyata: berapa visitor, dari mana mereka datang, dan apa yang mereka lakukan di website Anda.",
     },
     {
       icon: HiSupport,
-      title: "Ongoing Support",
+      title: "Upgrade Sesuai Hasil",
       description:
-        "Our partnership doesn&apos;t end at launch. We offer ongoing support to ensure your page remains optimized and effective.",
+        "Jika prototype berhasil, kami bantu upgrade ke website penuh. Jika tidak, Anda hanya kehilangan investasi kecil.",
     },
   ];
 
@@ -65,65 +64,48 @@ const HomePage: React.FC = () => {
         {/* Hero Section */}
         <section className="hero-bg pt-32 pb-20 lg:pt-48 lg:pb-32">
           <div className="container mx-auto px-6 text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-extrabold text-[#2F4F4F] leading-tight"
-            >
-              Crafting Digital Experiences that{" "}
-              <span className="gradient-text">Connect & Convert</span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-600"
-            >
-              We specialize in building high-performance landing pages that
-              captivate your audience and drive results. Establish a powerful
-              online presence with a design that&apos;s tailored to your vision.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-10 flex justify-center space-x-4"
-            >
+            <h1 className="text-4xl md:text-6xl font-extrabold text-[#2F4F4F] leading-tight">
+              Coba Dulu,{" "}
+              <span className="gradient-text">Baru Investasi Besar</span>
+            </h1>
+            <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-600">
+              Takut investasi besar untuk website? Kami hadir dengan solusi
+              prototype mulai Rp 1jt untuk mencoba konsep bisnis Anda terlebih
+              dahulu.
+              <span className="font-semibold text-[#00C4CC]">
+                Risiko minimal, hasil maksimal!
+              </span>
+            </p>
+            <div className="mt-10 flex justify-center space-x-4">
               <Link
                 href="/contact"
                 className="btn-primary text-lg font-semibold py-3 px-8 rounded-lg shadow-xl"
               >
-                Get Started
+                Mulai Sekarang
               </Link>
               <Link
                 href="/services"
                 className="btn-secondary text-lg font-semibold py-3 px-8 rounded-lg shadow-xl"
               >
-                Learn More
+                Pelajari Lebih Lanjut
               </Link>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Services Section */}
         <section id="services" className="py-20 bg-white">
           <div className="container mx-auto px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-[#2F4F4F]">
-                Your Vision, Our Expertise: The Perfect Landing Page
+                Mulai dengan Prototype, Skala Sesuai Hasil
               </h2>
               <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                We provide everything you need to launch a successful landing
-                page.
+                Tidak perlu langsung investasi besar. Mulai dengan website
+                prototype untuk menguji konsep bisnis Anda, lalu upgrade sesuai
+                kebutuhan dan hasil.
               </p>
-            </motion.div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <FeatureCard
@@ -138,44 +120,393 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Process Section */}
-        <section id="process" className="py-20">
+        {/* Pricing Section */}
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-[#2F4F4F]">
-                Simple Steps to Digital Success
+                Mulai dari Prototype, Upgrade Sesuai Hasil
               </h2>
               <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                Our streamlined process makes it easy to bring your vision to
-                life.
+                Tidak perlu langsung investasi besar. Mulai dengan prototype
+                murah untuk menguji konsep, lalu upgrade jika hasilnya bagus.
               </p>
-            </motion.div>
-            <div className="relative">
-              <div className="relative grid grid-cols-1 md:grid-cols-3 gap-12">
-                <ProcessStep
-                  step={1}
-                  title="Discover & Strategize"
-                  description="We start by understanding your business, audience, and goals to create a winning strategy."
-                  delay={0}
-                />
-                <ProcessStep
-                  step={2}
-                  title="Design & Develop"
-                  description="Our team designs and develops a beautiful, functional, and high-performing page just for you."
-                  delay={0.2}
-                />
-                <ProcessStep
-                  step={3}
-                  title="Launch & Optimize"
-                  description="We deploy your page and monitor its performance, making data-driven optimizations for success."
-                  delay={0.4}
-                />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Paket Starter */}
+              <div className="bg-white rounded-lg shadow-lg p-8 border-2 border-gray-200">
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-[#2F4F4F] mb-2">
+                    Website Prototype
+                  </h3>
+                  <div className="text-4xl font-bold text-[#00C4CC] mb-4">
+                    Rp 1jt
+                  </div>
+                  <p className="text-gray-600 mb-6">
+                    Coba konsep bisnis Anda dengan investasi minimal.
+                    <span className="font-semibold text-[#00C4CC]">
+                      Risiko kecil, peluang besar!
+                    </span>
+                  </p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>1 Halaman Website</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Desain Responsif</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Hosting & Domain 1 Tahun</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Form Kontak</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>WhatsApp Integration</span>
+                  </li>
+                </ul>
+                <Link
+                  href="/contact"
+                  className="w-full bg-gray-200 text-[#2F4F4F] font-semibold py-3 px-6 rounded-lg text-center block hover:bg-gray-300 transition"
+                >
+                  Pilih Paket Ini
+                </Link>
+              </div>
+
+              {/* Paket Professional */}
+              <div className="bg-white rounded-lg shadow-xl p-8 border-2 border-[#00C4CC] relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-[#00C4CC] text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    Paling Populer
+                  </span>
+                </div>
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-[#2F4F4F] mb-2">
+                    Website Lengkap
+                  </h3>
+                  <div className="text-4xl font-bold text-[#00C4CC] mb-4">
+                    Rp 2.5jt
+                  </div>
+                  <p className="text-gray-600 mb-6">
+                    Upgrade dari prototype yang berhasil.
+                    <span className="font-semibold text-[#00C4CC]">
+                      Investasi yang sudah teruji!
+                    </span>
+                  </p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Hingga 5 Halaman Website</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Desain Custom & Responsif</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>SEO Optimization</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Google Analytics</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Hosting & Domain 1 Tahun</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Maintenance 3 Bulan</span>
+                  </li>
+                </ul>
+                <Link
+                  href="/contact"
+                  className="w-full bg-[#00C4CC] text-white font-semibold py-3 px-6 rounded-lg text-center block hover:bg-[#00B8B8] transition"
+                >
+                  Pilih Paket Ini
+                </Link>
+              </div>
+
+              {/* Paket Aplikasi */}
+              <div className="bg-white rounded-lg shadow-lg p-8 border-2 border-gray-200">
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-[#2F4F4F] mb-2">
+                    Aplikasi Custom
+                  </h3>
+                  <div className="text-4xl font-bold text-[#00C4CC] mb-4">
+                    Rp 4jt
+                  </div>
+                  <p className="text-gray-600 mb-6">
+                    Untuk bisnis yang sudah terbukti berhasil dan butuh
+                    <span className="font-semibold text-[#00C4CC]">
+                      {" "}
+                      fitur khusus
+                    </span>
+                  </p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Aplikasi Web Custom</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Database & Admin Panel</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>User Management</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>API Integration</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Hosting & Domain 1 Tahun</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Maintenance 6 Bulan</span>
+                  </li>
+                </ul>
+                <Link
+                  href="/contact"
+                  className="w-full bg-gray-200 text-[#2F4F4F] font-semibold py-3 px-6 rounded-lg text-center block hover:bg-gray-300 transition"
+                >
+                  Konsultasi Dulu
+                </Link>
+              </div>
+            </div>
+            <div className="text-center mt-8">
+              <p className="text-gray-600">
+                <span className="font-semibold text-[#00C4CC]">
+                  Garansi 30 Hari
+                </span>{" "}
+                - Tidak puas? Uang kembali 100%
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section
+          id="process"
+          className="py-20 bg-gradient-to-br from-gray-50 to-white"
+        >
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2F4F4F]">
+                Langkah Sederhana Menuju Kesuksesan Digital
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Proses yang mudah dan terstruktur untuk mewujudkan visi bisnis
+                Anda.
+              </p>
+            </div>
+
+            {/* Desktop: Horizontal flow with connecting arrows */}
+            <div className="hidden lg:block">
+              <div className="flex items-start justify-between relative">
+                {[
+                  {
+                    step: 1,
+                    title: "Konsultasi & Screening",
+                    description:
+                      "Kami diskusi kebutuhan bisnis Anda, jelaskan layanan & pricing, pastikan scope sesuai paket. Gratis konsultasi untuk memahami problem bisnis Anda.",
+                    icon: "💬",
+                  },
+                  {
+                    step: 2,
+                    title: "Proposal & Agreement",
+                    description:
+                      "Kirim proposal lengkap (fitur, harga, timeline, scope). Setelah setuju, tandatangan kontrak & bayar DP 50% untuk memulai project.",
+                    icon: "📋",
+                  },
+                  {
+                    step: 3,
+                    title: "Design & Development",
+                    description:
+                      "Buat draft/demo sesuai kebutuhan. Kirim untuk feedback (max 2x revisi minor). Proses iterasi hingga hasil final sesuai ekspektasi.",
+                    icon: "⚡",
+                  },
+                  {
+                    step: 4,
+                    title: "Delivery & Launch",
+                    description:
+                      "Deploy website/aplikasi live. Klien cek & tanda tangan BAST. Bayar sisa 50% atau aktivasi langganan. Project resmi berjalan.",
+                    icon: "🚀",
+                  },
+                  {
+                    step: 5,
+                    title: "Maintenance & Support",
+                    description:
+                      "Handle domain, hosting, update kecil, bug fixing sesuai paket. Support via WA jam kerja sesuai SLA yang disepakati.",
+                    icon: "🔧",
+                  },
+                ].map((step, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col items-center relative"
+                  >
+                    {/* Connecting arrow (except for last step) */}
+                    {index < 4 && (
+                      <div className="absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-[#2F4F4F] to-[#2F4F4F]/30 z-0">
+                        <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-[#2F4F4F] border-t-2 border-b-2 border-t-transparent border-b-transparent"></div>
+                      </div>
+                    )}
+
+                    <div className="relative z-10 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 w-64 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                      <div className="w-16 h-16 bg-gradient-to-br from-[#2F4F4F] to-[#1a3a3a] rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4 relative">
+                        <span className="text-2xl">{step.icon}</span>
+                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center text-xs font-bold text-[#2F4F4F]">
+                          {step.step}
+                        </div>
+                      </div>
+                      <h3 className="text-lg font-bold text-[#2F4F4F] mb-3">
+                        {step.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobile & Tablet: Vertical flow */}
+            <div className="lg:hidden">
+              <div className="space-y-8">
+                {[
+                  {
+                    step: 1,
+                    title: "Konsultasi & Screening",
+                    description:
+                      "Kami diskusi kebutuhan bisnis Anda, jelaskan layanan & pricing, pastikan scope sesuai paket. Gratis konsultasi untuk memahami problem bisnis Anda.",
+                    icon: "💬",
+                  },
+                  {
+                    step: 2,
+                    title: "Proposal & Agreement",
+                    description:
+                      "Kirim proposal lengkap (fitur, harga, timeline, scope). Setelah setuju, tandatangan kontrak & bayar DP 50% untuk memulai project.",
+                    icon: "📋",
+                  },
+                  {
+                    step: 3,
+                    title: "Design & Development",
+                    description:
+                      "Buat draft/demo sesuai kebutuhan. Kirim untuk feedback (max 2x revisi minor). Proses iterasi hingga hasil final sesuai ekspektasi.",
+                    icon: "⚡",
+                  },
+                  {
+                    step: 4,
+                    title: "Delivery & Launch",
+                    description:
+                      "Deploy website/aplikasi live. Klien cek & tanda tangan BAST. Bayar sisa 50% atau aktivasi langganan. Project resmi berjalan.",
+                    icon: "🚀",
+                  },
+                  {
+                    step: 5,
+                    title: "Maintenance & Support",
+                    description:
+                      "Handle domain, hosting, update kecil, bug fixing sesuai paket. Support via WA jam kerja sesuai SLA yang disepakati.",
+                    icon: "🔧",
+                  },
+                ].map((step, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    {/* Step number and connecting line */}
+                    <div className="flex flex-col items-center">
+                      <div className="w-12 h-12 bg-gradient-to-br from-[#2F4F4F] to-[#1a3a3a] rounded-full flex items-center justify-center text-white text-lg font-bold relative">
+                        <span className="text-lg">{step.icon}</span>
+                        <div className="absolute -top-1 -right-1 w-5 h-5 bg-white rounded-full flex items-center justify-center text-xs font-bold text-[#2F4F4F]">
+                          {step.step}
+                        </div>
+                      </div>
+                      {index < 4 && (
+                        <div className="w-0.5 h-8 bg-gradient-to-b from-[#2F4F4F] to-[#2F4F4F]/30 mt-2"></div>
+                      )}
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                      <h3 className="text-lg font-bold text-[#2F4F4F] mb-3">
+                        {step.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Social Proof Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2F4F4F]">
+                Prototype yang Berhasil Menjadi Bisnis Nyata
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Banyak bisnis yang mulai dengan prototype murah, lalu berkembang
+                menjadi bisnis besar setelah melihat hasil nyata.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-[#00C4CC] mb-2">
+                  50+
+                </div>
+                <div className="text-lg font-semibold text-[#2F4F4F] mb-1">
+                  Website Berhasil
+                </div>
+                <div className="text-gray-600">
+                  Dibuat untuk berbagai jenis bisnis
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-[#00C4CC] mb-2">
+                  4.9/5
+                </div>
+                <div className="text-lg font-semibold text-[#2F4F4F] mb-1">
+                  Rating Klien
+                </div>
+                <div className="text-gray-600">Kepuasan klien yang tinggi</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-[#00C4CC] mb-2">
+                  3 Hari
+                </div>
+                <div className="text-lg font-semibold text-[#2F4F4F] mb-1">
+                  Pengerjaan Rata-rata
+                </div>
+                <div className="text-gray-600">
+                  Website siap online dengan cepat
+                </div>
+              </div>
+            </div>
+            <div className="text-center mt-12">
+              <div className="bg-gray-50 rounded-lg p-8 max-w-3xl mx-auto">
+                <div className="text-2xl text-[#2F4F4F] font-semibold mb-4">
+                  "Mulai dengan prototype Rp 1jt, sekarang bisnis saya sudah
+                  omzet 50jt/bulan. Investasi kecil, hasil besar!"
+                </div>
+                <div className="text-gray-600">
+                  - <span className="font-semibold">Budi Santoso</span>, Owner
+                  Toko Elektronik (Upgrade dari Prototype ke Website Lengkap)
+                </div>
               </div>
             </div>
           </div>
@@ -185,38 +516,26 @@ const HomePage: React.FC = () => {
         <section id="apps" className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="flex flex-col lg:flex-row items-center gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="lg:w-1/2 text-center lg:text-left"
-              >
+              <div className="lg:w-1/2 text-center lg:text-left">
                 <h2 className="text-3xl md:text-4xl font-bold text-[#2F4F4F]">
-                  Ready to Go Beyond a Landing Page?
+                  Siap Melangkah Lebih Jauh dari Website?
                 </h2>
                 <p className="mt-4 text-lg text-gray-600">
-                  A landing page is just the beginning. Expand your digital
-                  footprint with a custom web or mobile application. We build
-                  intuitive, scalable, and powerful apps that engage your users
-                  and grow your business.
+                  Website hanyalah permulaan. Perluas kehadiran digital Anda
+                  dengan aplikasi web atau mobile custom. Kami membangun
+                  aplikasi yang intuitif, scalable, dan powerful untuk
+                  melibatkan pengguna dan mengembangkan bisnis Anda.
                 </p>
                 <div className="mt-8">
                   <Link
                     href="/contact"
                     className="btn-secondary text-lg font-semibold py-3 px-8 rounded-lg shadow-xl"
                   >
-                    Explore App Services
+                    Jelajahi Layanan Aplikasi
                   </Link>
                 </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="lg:w-1/2"
-              >
+              </div>
+              <div className="lg:w-1/2">
                 {/* Placeholder for an app image/mockup */}
                 <div className="bg-gray-200 rounded-lg p-8">
                   <div className="bg-white rounded-lg shadow-2xl overflow-hidden">
@@ -226,7 +545,7 @@ const HomePage: React.FC = () => {
                         <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                         <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                       </div>
-                      <div className="text-sm text-gray-500">Your App</div>
+                      <div className="text-sm text-gray-500">Aplikasi Anda</div>
                     </div>
                     <div className="p-6 h-64 flex flex-col items-center justify-center bg-gray-50 space-y-4">
                       <svg
@@ -244,7 +563,7 @@ const HomePage: React.FC = () => {
                         />
                       </svg>
                       <p className="font-semibold text-gray-700">
-                        Intuitive App Solutions
+                        Solusi Aplikasi yang Intuitif
                       </p>
                       <div className="w-full bg-gray-200 rounded-full h-2.5">
                         <div
@@ -255,37 +574,45 @@ const HomePage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
         <section id="contact" className="py-20 bg-[#2F4F4F]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="container mx-auto px-6 text-center"
-          >
+          <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white">
-              Let&apos;s Build Your Digital Success Story
+              Takut Investasi Besar? Coba Prototype Dulu!
             </h2>
             <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
-              Ready to elevate your online presence? Contact us today for a
-              free, no-obligation quote and let&apos;s discuss how we can help
-              you achieve your goals.
+              Mulai dengan prototype Rp 1jt untuk menguji konsep bisnis Anda.
+              Jika berhasil, upgrade ke website lengkap. Jika tidak, Anda hanya
+              kehilangan investasi kecil.
+              <span className="font-semibold text-white">
+                Konsultasi GRATIS
+              </span>{" "}
+              untuk prototype Anda!
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="btn-primary text-lg font-semibold py-3 px-8 rounded-lg shadow-xl"
               >
-                Get Your Free Quote
+                Coba Prototype Rp 1jt
+              </Link>
+              <Link
+                href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Dwan%20Tech."
+                className="bg-green-600 hover:bg-green-700 text-white text-lg font-semibold py-3 px-8 rounded-lg shadow-xl transition"
+              >
+                Chat WhatsApp
               </Link>
             </div>
-          </motion.div>
+            <div className="mt-6 text-sm text-gray-400">
+              ⚡ Prototype siap dalam 3 hari • 💰 Mulai Rp 1jt • 🛡️ Garansi 30
+              hari
+            </div>
+          </div>
         </section>
       </main>
 

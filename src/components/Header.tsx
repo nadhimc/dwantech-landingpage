@@ -2,18 +2,20 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 import { HiMenu, HiX } from "react-icons/hi";
 import Logo from "./Logo";
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const navItems = [
+    { href: "/", label: "Home" },
     { href: "/services", label: "Layanan" },
     { href: "/portfolio", label: "Portofolio" },
     { href: "/process", label: "Proses Kerja" },
@@ -35,15 +37,22 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-gray-600 hover:text-[#00C4CC] transition-colors"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`transition-colors ${
+                    isActive
+                      ? "text-[#00C4CC] font-semibold border-b-2 border-[#00C4CC] pb-1"
+                      : "text-gray-600 hover:text-[#00C4CC]"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* CTA Button */}
@@ -69,26 +78,25 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Menu */}
-        <motion.div
-          initial={false}
-          animate={{
-            height: isMobileMenuOpen ? "auto" : 0,
-            opacity: isMobileMenuOpen ? 1 : 0,
-          }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden"
-        >
+        <div className="md:hidden overflow-hidden">
           <div className="mt-4 space-y-2">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block py-2 px-4 text-sm hover:bg-gray-100 rounded transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`block py-2 px-4 text-sm rounded transition-colors ${
+                    isActive
+                      ? "bg-[#00C4CC] text-white font-semibold"
+                      : "hover:bg-gray-100"
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
             <Link
               href="/contact"
               className="block mt-2 text-center w-full btn-primary font-semibold py-2 px-5 rounded-lg shadow-md"
@@ -97,7 +105,7 @@ const Header: React.FC = () => {
               Minta Penawaran
             </Link>
           </div>
-        </motion.div>
+        </div>
       </div>
     </header>
   );

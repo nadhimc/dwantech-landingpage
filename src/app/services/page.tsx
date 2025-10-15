@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import {
   HiPencil,
   HiDeviceMobile,
@@ -62,12 +61,7 @@ const ServicesPage: React.FC = () => {
       <main>
         <section className="pt-32 pb-20 bg-white">
           <div className="container mx-auto px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
+            <div className="text-center mb-12">
               <h1 className="text-3xl md:text-4xl font-bold text-[#2F4F4F]">
                 Layanan Landing Page & Website
               </h1>
@@ -75,7 +69,7 @@ const ServicesPage: React.FC = () => {
                 Semua yang Anda butuhkan untuk membangun kehadiran online yang
                 kuat dan efektif.
               </p>
-            </motion.div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <FeatureCard

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import {
   FaPhone,
   FaEnvelope,
@@ -48,56 +47,35 @@ const ContactPage: React.FC = () => {
         {/* Hero Section */}
         <section className="hero-bg pt-32 pb-20 lg:pt-48 lg:pb-32">
           <div className="container mx-auto px-6 text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-extrabold text-[#2F4F4F] leading-tight"
-            >
+            <h1 className="text-4xl md:text-6xl font-extrabold text-[#2F4F4F] leading-tight">
               Mari Diskusikan <span className="gradient-text">Proyek Anda</span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-600"
-            >
+            </h1>
+            <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-600">
               Siap untuk memulai perjalanan digital Anda? Hubungi kami sekarang
               dan mari kita wujudkan visi Anda bersama.
-            </motion.p>
+            </p>
           </div>
         </section>
 
         {/* Contact Info Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-[#2F4F4F]">
                 Hubungi Kami
               </h2>
               <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
                 Pilih cara yang paling nyaman untuk menghubungi kami.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
                 return (
-                  <motion.a
+                  <a
                     key={index}
                     href={info.link}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ scale: 1.05 }}
                     className="feature-card bg-gray-50 p-8 rounded-xl border border-gray-200/80 text-center group"
                   >
                     <div className="flex items-center justify-center h-12 w-12 rounded-full bg-[#00C4CC]/20 mb-4 mx-auto">
@@ -107,7 +85,7 @@ const ContactPage: React.FC = () => {
                     <p className="text-gray-600 group-hover:text-[#00C4CC] transition-colors">
                       {info.content}
                     </p>
-                  </motion.a>
+                  </a>
                 );
               })}
             </div>
@@ -116,13 +94,7 @@ const ContactPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 bg-[#2F4F4F]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="container mx-auto px-6 text-center"
-          >
+          <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white">
               Siap Memulai Proyek Anda?
             </h2>
@@ -146,7 +118,7 @@ const ContactPage: React.FC = () => {
                 Kirim Email
               </a>
             </div>
-          </motion.div>
+          </div>
         </section>
       </main>
 

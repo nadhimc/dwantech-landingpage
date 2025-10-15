@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   keywords:
     "landing page, website, aplikasi web, aplikasi mobile, digital marketing, SEO, responsive design",
   authors: [{ name: "Dwan Tech" }],
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
     title: "Dwan Tech | Direction One for Digital Success",
     description:

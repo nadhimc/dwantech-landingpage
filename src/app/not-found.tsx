@@ -2,7 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
@@ -15,12 +14,7 @@ const NotFound: React.FC = () => {
       <main>
         <section className="hero-bg pt-32 pb-20 lg:pt-48 lg:pb-32">
           <div className="container mx-auto px-6 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-2xl mx-auto"
-            >
+            <div className="max-w-2xl mx-auto">
               <h1 className="text-6xl md:text-8xl font-extrabold text-[#2F4F4F] mb-4">
                 404
               </h1>
@@ -45,7 +39,7 @@ const NotFound: React.FC = () => {
                   Hubungi Kami
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </main>

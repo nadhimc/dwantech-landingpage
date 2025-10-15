@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -16,13 +15,7 @@ const AppsPage: React.FC = () => {
         <section className="pt-32 pb-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="flex flex-col lg:flex-row items-center gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="lg:w-1/2 text-center lg:text-left"
-              >
+              <div className="lg:w-1/2 text-center lg:text-left">
                 <h1 className="text-3xl md:text-4xl font-bold text-[#2F4F4F]">
                   Siap untuk Solusi yang Lebih Besar?
                 </h1>
@@ -40,14 +33,8 @@ const AppsPage: React.FC = () => {
                     Diskusikan Proyek Aplikasi
                   </Link>
                 </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="lg:w-1/2"
-              >
+              </div>
+              <div className="lg:w-1/2">
                 {/* Placeholder for an app image/mockup */}
                 <div className="bg-gray-200 rounded-lg p-8">
                   <div className="bg-white rounded-lg shadow-2xl overflow-hidden">
@@ -86,7 +73,7 @@ const AppsPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
