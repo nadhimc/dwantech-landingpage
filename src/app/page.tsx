@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
       icon: HiPencil,
       title: "Prototype Cepat & Murah",
       description:
-        "Dapatkan website prototype dalam 3 hari dengan investasi minimal. Coba konsep bisnis Anda tanpa risiko besar.",
+        "Dapatkan website prototype dalam 7 hari dengan investasi minimal. Coba konsep bisnis Anda tanpa risiko besar.",
     },
     {
       icon: HiDeviceMobile,
@@ -61,46 +61,99 @@ const HomePage: React.FC = () => {
       <Header />
 
       <main>
-        {/* Hero Section */}
-        <section className="hero-bg pt-32 pb-20 lg:pt-48 lg:pb-32">
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-6xl font-extrabold text-[#2F4F4F] leading-tight">
-              Coba Dulu,{" "}
-              <span className="gradient-text">Baru Investasi Besar</span>
-            </h1>
-            <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-600">
-              Takut investasi besar untuk website? Kami hadir dengan solusi
-              prototype mulai Rp 1jt untuk mencoba konsep bisnis Anda terlebih
-              dahulu.
-              <span className="font-semibold text-[#00C4CC]">
-                Risiko minimal, hasil maksimal!
+        {/* Hero Section - Modern 2024 Design */}
+        <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+          {/* Modern background with glassmorphism */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#00C4CC]/5 via-white to-[#2F4F4F]/5"></div>
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute top-10 left-10 w-2 h-2 bg-[#00C4CC]/20 rounded-full"></div>
+            <div className="absolute top-20 right-20 w-1 h-1 bg-[#00C4CC]/30 rounded-full"></div>
+            <div className="absolute bottom-20 left-1/3 w-1.5 h-1.5 bg-[#00C4CC]/25 rounded-full"></div>
+            <div className="absolute bottom-10 right-1/3 w-1 h-1 bg-[#00C4CC]/20 rounded-full"></div>
+          </div>
+
+          {/* Floating glassmorphism elements */}
+          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-[#00C4CC]/20 to-[#00C4CC]/5 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-[#2F4F4F]/15 to-[#2F4F4F]/5 rounded-full blur-xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 left-1/4 w-20 h-20 bg-gradient-to-br from-[#00C4CC]/10 to-transparent rounded-full blur-lg animate-pulse delay-2000"></div>
+
+          <div className="container mx-auto px-6 text-center relative z-10">
+            {/* Elegant headline */}
+            <h1 className="text-4xl md:text-5xl font-light leading-tight mb-8">
+              <span className="text-[#2F4F4F] font-medium">Coba Dulu,</span>
+              <br />
+              <span className="text-[#00C4CC] font-semibold">
+                Baru Investasi Besar
               </span>
-            </p>
-            <div className="mt-10 flex justify-center space-x-4">
+            </h1>
+
+            {/* Elegant subtitle */}
+            <div className="relative mb-10">
+              <div className="backdrop-blur-sm bg-white/60 rounded-2xl p-6 shadow-lg border border-white/20 max-w-3xl mx-auto">
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Takut investasi besar untuk website? Kami hadir dengan solusi
+                  prototype mulai Rp 1jt untuk mencoba konsep bisnis Anda
+                  terlebih dahulu.
+                  <span className="block mt-2 font-medium text-[#00C4CC]">
+                    Risiko minimal, hasil maksimal!
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            {/* Elegant CTA buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="btn-primary text-lg font-semibold py-3 px-8 rounded-lg shadow-xl"
+                className="px-8 py-3 bg-[#00C4CC] text-white font-medium rounded-lg shadow-lg hover:shadow-xl hover:bg-[#00AAB2] transition-all duration-300"
               >
                 Mulai Sekarang
               </Link>
               <Link
                 href="/services"
-                className="btn-secondary text-lg font-semibold py-3 px-8 rounded-lg shadow-xl"
+                className="px-8 py-3 backdrop-blur-sm bg-white/80 text-[#2F4F4F] font-medium rounded-lg border border-white/40 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Pelajari Lebih Lanjut
               </Link>
             </div>
+
+            {/* Trust indicators - simple design */}
+            <div className="mt-12 flex flex-wrap justify-center items-center gap-6 text-sm text-gray-500">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-[#00C4CC] rounded-full"></div>
+                <span>⚡ Prototype siap dalam 7 hari</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-[#00C4CC] rounded-full"></div>
+                <span>💰 Mulai Rp 1jt</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-[#00C4CC] rounded-full"></div>
+                <span>🛡️ Garansi 30 hari</span>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Services Section */}
-        <section id="services" className="py-20 bg-white">
-          <div className="container mx-auto px-6">
+        {/* Services Section - Modern Design */}
+        <section
+          id="services"
+          className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden"
+        >
+          {/* Background pattern */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-20 left-20 w-3 h-3 bg-[#00C4CC]/10 rounded-full"></div>
+            <div className="absolute top-40 right-40 w-2 h-2 bg-[#00C4CC]/15 rounded-full"></div>
+            <div className="absolute bottom-20 left-1/2 w-2.5 h-2.5 bg-[#00C4CC]/10 rounded-full"></div>
+            <div className="absolute bottom-40 right-1/3 w-1.5 h-1.5 bg-[#00C4CC]/15 rounded-full"></div>
+          </div>
+
+          <div className="container mx-auto px-6 relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2F4F4F]">
+              <h2 className="text-3xl md:text-4xl font-light text-[#2F4F4F] mb-4">
                 Mulai dengan Prototype, Skala Sesuai Hasil
               </h2>
-              <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Tidak perlu langsung investasi besar. Mulai dengan website
                 prototype untuk menguji konsep bisnis Anda, lalu upgrade sesuai
                 kebutuhan dan hasil.
@@ -487,7 +540,7 @@ const HomePage: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-[#00C4CC] mb-2">
-                  3 Hari
+                  7 Hari
                 </div>
                 <div className="text-lg font-semibold text-[#2F4F4F] mb-1">
                   Pengerjaan Rata-rata
@@ -609,7 +662,7 @@ const HomePage: React.FC = () => {
               </Link>
             </div>
             <div className="mt-6 text-sm text-gray-400">
-              ⚡ Prototype siap dalam 3 hari • 💰 Mulai Rp 1jt • 🛡️ Garansi 30
+              ⚡ Prototype siap dalam 7 hari • 💰 Mulai Rp 1jt • 🛡️ Garansi 30
               hari
             </div>
           </div>
