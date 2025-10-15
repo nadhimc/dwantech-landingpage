@@ -77,7 +77,6 @@ const ServicesPage: React.FC = () => {
                   icon={feature.icon}
                   title={feature.title}
                   description={feature.description}
-                  delay={index * 0.1}
                 />
               ))}
             </div>

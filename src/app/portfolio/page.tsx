@@ -35,7 +35,7 @@ const PortfolioPage: React.FC = () => {
                   Proyek Real & Case Studies
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                  {realProjects.map((project, index) => (
+                  {realProjects.map((project) => (
                     <PortfolioCard
                       key={project.id}
                       title={project.title}
@@ -47,7 +47,6 @@ const PortfolioPage: React.FC = () => {
                       challenges={project.challenges}
                       solutions={project.solutions}
                       techStack={project.techStack}
-                      delay={index * 0.1}
                     />
                   ))}
                 </div>
@@ -61,7 +60,7 @@ const PortfolioPage: React.FC = () => {
                   Concept Work & Mock Projects
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                  {conceptProjects.map((project, index) => (
+                  {conceptProjects.map((project) => (
                     <PortfolioCard
                       key={project.id}
                       title={project.title}
@@ -70,7 +69,6 @@ const PortfolioPage: React.FC = () => {
                       tags={project.tags}
                       isRealProject={project.isRealProject}
                       techStack={project.techStack}
-                      delay={index * 0.1}
                     />
                   ))}
                 </div>

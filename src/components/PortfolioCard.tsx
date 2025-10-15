@@ -6,7 +6,6 @@ interface PortfolioCardProps {
   description: string;
   image: string;
   tags: string[];
-  delay?: number;
   isRealProject?: boolean;
   metrics?: {
     omzet?: string;
@@ -24,7 +23,6 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
   description,
   image,
   tags,
-  delay = 0,
   isRealProject = true,
   metrics,
   challenges,

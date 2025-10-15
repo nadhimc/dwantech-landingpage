@@ -14,7 +14,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
 import FeatureCard from "@/components/FeatureCard";
-import ProcessStep from "@/components/ProcessStep";
 
 const HomePage: React.FC = () => {
   const features = [
@@ -166,7 +165,6 @@ const HomePage: React.FC = () => {
                   icon={feature.icon}
                   title={feature.title}
                   description={feature.description}
-                  delay={index * 0.1}
                 />
               ))}
             </div>
@@ -553,8 +551,8 @@ const HomePage: React.FC = () => {
             <div className="text-center mt-12">
               <div className="bg-gray-50 rounded-lg p-8 max-w-3xl mx-auto">
                 <div className="text-2xl text-[#2F4F4F] font-semibold mb-4">
-                  "Mulai dengan prototype Rp 1jt, sekarang bisnis saya sudah
-                  omzet 50jt/bulan. Investasi kecil, hasil besar!"
+                  &quot;Mulai dengan prototype Rp 1jt, sekarang bisnis saya
+                  sudah omzet 50jt/bulan. Investasi kecil, hasil besar!&quot;
                 </div>
                 <div className="text-gray-600">
                   - <span className="font-semibold">Budi Santoso</span>, Owner

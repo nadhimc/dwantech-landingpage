@@ -4,14 +4,12 @@ interface ProcessStepProps {
   step: number;
   title: string;
   description: string;
-  delay?: number;
 }
 
 const ProcessStep: React.FC<ProcessStepProps> = ({
   step,
   title,
   description,
-  delay = 0,
 }) => {
   return (
     <div className="text-center">

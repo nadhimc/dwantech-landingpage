@@ -5,14 +5,12 @@ interface FeatureCardProps {
   icon: IconType;
   title: string;
   description: string;
-  delay?: number;
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({
   icon: Icon,
   title,
   description,
-  delay = 0,
 }) => {
   return (
     <div className="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
