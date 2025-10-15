@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default: "Dwan Tech | Jasa Pembuatan Website & Aplikasi Murah di Indonesia",
-    template: "%s | Dwan Tech - Jasa Website & Aplikasi"
+    template: "%s | Dwan Tech - Jasa Website & Aplikasi",
   },
   description:
     "Dwan Tech menyediakan jasa pembuatan website prototype murah mulai Rp 1jt, aplikasi web custom, dan landing page berkinerja tinggi. Solusi digital untuk bisnis kecil hingga menengah di Indonesia.",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "website prototype",
     "aplikasi web custom",
     "digital marketing",
-    "web developer Indonesia"
+    "web developer Indonesia",
   ],
   authors: [{ name: "Dwan Tech", url: "https://dwantech.com" }],
   creator: "Dwan Tech",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://dwantech.com"),
+  metadataBase: new URL("http://localhost:3003"),
   alternates: {
     canonical: "/",
     languages: {

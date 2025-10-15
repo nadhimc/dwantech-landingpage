@@ -16,6 +16,100 @@ import WhatsAppFAB from "@/components/WhatsAppFAB";
 import FeatureCard from "@/components/FeatureCard";
 
 const HomePage: React.FC = () => {
+  // Structured Data for SEO
+  const businessStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Dwan Tech",
+    description:
+      "Dwan Tech menyediakan jasa pembuatan website prototype murah mulai Rp 1jt, aplikasi web custom, dan landing page berkinerja tinggi.",
+    url: "https://dwantech.com",
+    logo: "https://dwantech.com/favicon.svg",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+62-812-3456-7890",
+      contactType: "customer service",
+      availableLanguage: "Indonesian",
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "ID",
+      addressLocality: "Indonesia",
+    },
+    sameAs: ["https://wa.me/6281234567890"],
+    serviceArea: {
+      "@type": "Country",
+      name: "Indonesia",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Jasa Pembuatan Website & Aplikasi",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Website Prototype",
+            description:
+              "Website prototype murah mulai Rp 1jt untuk menguji konsep bisnis Anda",
+          },
+          price: "1000000",
+          priceCurrency: "IDR",
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Website Lengkap",
+            description:
+              "Website lengkap dengan SEO optimization dan maintenance",
+          },
+          price: "2500000",
+          priceCurrency: "IDR",
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Aplikasi Custom",
+            description: "Aplikasi web custom dengan database dan admin panel",
+          },
+          price: "4000000",
+          priceCurrency: "IDR",
+        },
+      ],
+    },
+  };
+
+  // FAQ Schema for SEO
+  const faqData = [
+    {
+      question: "Berapa harga pembuatan website prototype?",
+      answer:
+        "Website prototype dimulai dari Rp 1jt dengan timeline 7 hari. Harga ini sudah termasuk hosting dan domain 1 tahun.",
+    },
+    {
+      question: "Apa perbedaan website prototype dan website lengkap?",
+      answer:
+        "Website prototype adalah versi sederhana untuk menguji konsep bisnis, sedangkan website lengkap memiliki fitur SEO, analytics, dan maintenance.",
+    },
+    {
+      question: "Berapa lama pengerjaan website prototype?",
+      answer:
+        "Website prototype siap dalam 7 hari kerja. Timeline ini realistis untuk memastikan kualitas yang baik.",
+    },
+    {
+      question: "Apakah ada garansi untuk website yang dibuat?",
+      answer:
+        "Ya, kami memberikan garansi 30 hari. Jika tidak puas, uang kembali 100%.",
+    },
+    {
+      question: "Bisakah website di-upgrade dari prototype ke versi lengkap?",
+      answer:
+        "Tentu saja! Jika prototype berhasil, kami akan membantu upgrade ke website lengkap dengan fitur yang lebih advanced.",
+    },
+  ];
+
   const features = [
     {
       icon: HiPencil,

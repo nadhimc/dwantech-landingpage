@@ -1,0 +1,21 @@
+{
+  "name": "Dwan Tech - Jasa Pembuatan Website & Aplikasi",
+  "short_name": "Dwan Tech",
+  "description": "Dwan Tech menyediakan jasa pembuatan website prototype murah mulai Rp 1jt, aplikasi web custom, dan landing page berkinerja tinggi.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00C4CC",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "id",
+  "dir": "ltr"
+}
